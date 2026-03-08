@@ -11,3 +11,8 @@ endif()
 if (WIN32 AND QT_VERSION LESS 6)
     add_subdirectory(win_directx_helper)
 endif()
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake_helpers")
+include(init_target)
+include(generate_target)
+include(options)
+# ... etc según necesites
